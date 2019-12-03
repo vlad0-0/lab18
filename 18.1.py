@@ -16,16 +16,19 @@ y = 0
 y2 = m-1
 print(a[0][0])
 while x1!=x2 and y1!=y2:
-    while y < y2:
-        y += 1
-        print(a[y][x])
-    while x < x2:
-        x += 1
-        print(a[y][x])
-    while y > y1:
-        y -= 1
-        print(a[y][x])
-    while x > x1:
-        x -= 1
-        print(a[y][x])
-        
+    for i in range(y1, y2+1):
+        print(a[i][x])
+    y = i
+    x1 += 1
+    for i in range(x1, x2+1):
+        print(a[y][i])
+    x = i
+    y2 -= 1
+    for i in range(y2, y1+1):
+        print(a[i][x])
+    y = i
+    x2 -= 1
+    for i in range(x2, x1+1):
+        print(a[y][i])
+    x = i
+    y1 += 1
