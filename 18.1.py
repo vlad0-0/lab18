@@ -8,13 +8,14 @@ for i in range(m):
         b.append(input())
     a.append(b)
     b = []
+del(b)
+del(j)
 x1 = 0
 x = 0
 x2 = m-1
 y1 = 0
 y = 0
 y2 = m-1
-print(a[0][0])
 while x1!=x2 and y1!=y2:
     for i in range(y1, y2+1):
         print(a[i][x])
@@ -32,3 +33,4 @@ while x1!=x2 and y1!=y2:
         print(a[y][i])
     x = i
     y1 += 1
+print(a[x1][y1])
